@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style> body {
+    font-family: 'Noto Sans TC', sans-serif; 
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4dbacaa9-1e75-49f0-88a4-9720265afe29/d7mmqks-e84ac8cd-f6ba-4468-ad42-b6bf9b813f8d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkYmFjYWE5LTFlNzUtNDlmMC04OGE0LTk3MjAyNjVhZmUyOVwvZDdtbXFrcy1lODRhYzhjZC1mNmJhLTQ0NjgtYWQ0Mi1iNmJmOWI4MTNmOGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.hUusxxNj97ekeOKymgPFgMFiU0YOzpRC0H-DEeSgNqs);
+    background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ts{
+  transform: rotateY(180deg)
+}
+
+a:hover {
+color:#000000;
+text-decoration:none;
+
+}
+a:active {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.container{
+        min-width:1600px;
+        min-height:800px;
+        }
+
+
+
+
+</style>
+</head>
+<body id="Bd">
+  <p>數據展示：
+          <div class="row justify-content-center">
+            <div class="col-sm-4 bg-light border rounded border-dark">
+              <b>名字</b>
+            </div>
+            <div class="col-sm-6 bg-light border rounded border-dark">
+              <b>信箱</b>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-sm-4 bg-light border rounded border-dark">
+              <b>APP_ID : <input id="app_id" name="app_id" type="number" /></b>
+            </div>
+            <div class="col-sm-6 bg-light border rounded border-dark">
+              <b>APP_NAME : <input id="app_name" name="app_name" type="text" /></b>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-2  bg-light ">
+              <button id='btnGet'>GET</button>
+              <button id="btnPost">POST</button>
+            </div>
+          </div>
+
+          <div class="row"><br></div>
+
+         
+          
+          <div class="row justify-content-center">
+            <div id="console">
+            </div>
+            <script></script>
+          </div>
+          
+         </div>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/clickvoice.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/dvfresh.js') }}" type="text/javascript"></script>
+  
+</body>
+</html>
+
+

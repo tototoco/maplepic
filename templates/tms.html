@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}tms{% endblock %}
+
+{% block title2 %}我的TMS紀錄{% endblock %}
+
+
+{% block charactor %}
+<li>
+  <a class="dropdown-item" href="#">舊寶島</a>
+</li>
+{% endblock %}
+
+{% block quest %}
+<li>
+  <a class="dropdown-item" href="#">每日單推boss</a>
+</li>
+<li>
+  <a class="dropdown-item" href="#">武功道場</a>
+</li>
+<li>
+  <a class="dropdown-item" href="#">杜松種子</a>
+</li>
+<li>
+    <a class="dropdown-item" href="#">怪物公園</a>
+  </li>
+  <li>
+    <a class="dropdown-item" href="#">破王</a>
+  </li>
+  <li>
+    <a class="dropdown-item" href="#">ARC</a>
+  </li>
+  <li>
+    <a class="dropdown-item" href="#">航海</a>
+  </li>
+  <li>
+    <a class="dropdown-item" href="#">THE SEED</a>
+  </li>
+{% endblock %}
+
+{% block gear %}
+<li>
+  <a class="dropdown-item" href="#">舊寶島</a>
+</li>
+{% endblock %}
+
+{% block event %}
+<li>
+  <a class="dropdown-item" href="#">周年慶</a>
+</li>
+
+{% endblock %}
+
+{% block target %}
+<li>
+  <a class="dropdown-item" href="#">賺錢目標</a>
+</li>
+
+{% endblock %}
+
+{% block container %}
+<input type="button" value="更新公告" onclick="location.href='/home/tmsnews'"></button>
+<div class="row text-center">
+  <div class="col-sm-3 text-center"></div>
+  <div class="col-sm-6 text-center">
+  <ul class="list-group" id="shownews">
+    {% for new in input %}
+    <li class="list-group-item list-group-item-warning "><a href="{{new.url}}">{{ new.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+  <div class="col-sm-3 text-center"></div>
+</div>
+
+
+{% endblock %}
+
+{% block tms %}<img src="https://c.tenor.com/0SSoIzqtdmUAAAAi/tap-finger.gif" width="30px" alt=""></a>{% endblock %}
+{% block rms %}</a>{% endblock %}
+
+{% block tmsd %}
+class="disabled "
+
+{% endblock tmsd %}

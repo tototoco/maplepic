@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}rms{% endblock %}
+
+{% block title2 %}我RMS紀錄{% endblock %}
+
+{% block charactor %}
+<li>
+  <a class="dropdown-item" href="/home/show">levelS</a>
+</li>
+{% endblock %}
+
+{% block quest %}
+<li>
+  <a class="dropdown-item"  href="/home/rms/boss" data-id="boss">每日單推boss</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/rms/dojo" data-id="dojo">武功道場</a>
+</li>
+<li>
+  <a class="dropdown-item"   href="/home/rms/lhc" data-id="lhc">LHC</a>
+{% endblock %}
+
+{% block gear %}
+<li>
+  <a class="dropdown-item"  href="/home/rms/123" data-id="lvs">levelS</a>
+</li>
+{% endblock %}
+
+{% block event %}
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="ani">周年慶</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="summer">夏日活動</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="helloween">萬聖節</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="chris">聖誕節</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="newyear">新年</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="love">情人節</a>
+</li>
+{% endblock %}
+
+{% block target %}
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="farming">賺錢目標</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="hpwash">洗血</a>
+</li>
+<li>
+  <a class="dropdown-item"  href="/home/show" data-id="leech">分身鍊等</a>
+</li>
+{% endblock %}
+
+{% block container %}
+<div class="row text-center">
+<li><a href="/home/rms/A">database</a></li>
+<li><a href="/home/rms/B">NONE</a></li>
+</div>
+
+<input type="button" value="更新公告" onclick="location.href='/home/rmsnews'"></button>
+<div class="row text-center">
+  <div class="col-sm-3 text-center"></div>
+  <div class="col-sm-6 text-center">
+  <ul class="list-group" id="shownews">
+    {% for new in input %}
+    <li class="list-group-item list-group-item-warning "><a href="{{new.url}}">{{ new.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+  <div class="col-sm-3 text-center"></div>
+</div>
+
+{% endblock %}
+
+
+{% block rms %}<img src="https://c.tenor.com/0SSoIzqtdmUAAAAi/tap-finger.gif" width="30px" alt=""></a>{% endblock %}
+
+{% block rmsd %}
+class="disabled "
+{% endblock rmsd %}
