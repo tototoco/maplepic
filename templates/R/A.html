@@ -1,0 +1,33 @@
+{% extends "rms.html" %}
+
+
+
+{% block container %}
+<div class="row justify-content-center">
+  <div class="col-sm-12 bg-light ">
+  <form action = "{{ request.path }}"  method="POST"> <!-- form 表單 -->
+      {{form.hidden_tag()}}
+      {{form.name.label(class='form-label')}} 
+      {{form.name(class='form-control')}} 
+      <br>
+      {{form.email.label(class='form-label')}} 
+      {{form.email(class='form-control')}} 
+      {{form.submit(class='btn btn-primary')}}
+    </form>
+  </div>
+</div>
+<div class="row  "><br></div>
+<div class="row justify-content-center">
+  <div class="col-sm-2  bg-light  ">
+    <a href="/home/show">看資料庫  </a>
+  </div>
+  
+  <div class="col-sm-2  bg-light  ">
+    <a href="/home/rms">  回上一頁</a>
+  </div>
+</div>
+<div class="row "><br></div>
+
+{% endblock %}
+
+

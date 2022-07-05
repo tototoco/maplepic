@@ -1,0 +1,46 @@
+{% extends "rms.html" %}
+
+{% block title %}Dojo{% endblock %}
+
+{% block title2 %}Dojo{% endblock %}
+
+
+
+
+
+{% block container %}
+
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-3 bg-light border rounded border-dark">
+    <b>圖片</b>
+  </div>
+  <div class="col-sm-6 bg-light border rounded border-dark">
+    <b>資訊</b>
+  </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-3 bg-light border rounded " >
+      <img  src="{{ url_for('static', filename='img/MuGong.png') }}"  style="vertical-align:middle;" alt=""  >
+    </div>
+    <div class="col-sm-6 bg-light rounded border-bottom border-right border-top">
+      <p>武公<p>
+    </div>
+  </div>
+
+
+  
+<div class="row"><br></div>
+<div class="row justify-content-center">
+  <div class="col-sm-2  bg-light ">
+  <a href="/home/rms/A">回上一頁</a>
+  </div>
+</div>
+<div class="row"><br></div>
+
+{% endblock %}
+
+
+<!--https://medium.com/seaniap/python-web-flask-get-post%E5%82%B3%E9%80%81%E8%B3%87%E6%96%99-2826aeeb0e28-->

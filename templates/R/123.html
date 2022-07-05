@@ -1,0 +1,16 @@
+{% extends "rms.html" %}
+{% block container %}
+<a class="btn" id="open">彈窗</a>
+<div id="myModal" class="modal hide fade">
+   <div class="modal-body">
+    <iframe id="myIframe" width="100%" height="100%"></iframe>
+   </div>
+</div>
+{% endblock %}
+
+<script>
+    $("#open").click(function(){
+        $("#myIframe").attr("src","test.html");
+        $('#myModal').modal({show:true});
+    });
+    </script>

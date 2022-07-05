@@ -1,0 +1,55 @@
+{% extends "rms.html" %}
+
+{% block title %}結果{% endblock %}
+
+{% block title2 %}我的回應{% endblock %}
+
+
+
+
+
+{% block container %}
+<div class="row">   
+  <div class="col-sm-2 bg-light border-right ">
+    <b>a</b>
+  </div>
+</div>
+
+<div class="row ">
+    <div class="col-sm-2 bg-light border-right">
+      <p>1<p>
+    </div>
+</div>
+
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-2 bg-light border rounded border-dark">
+    <b>名字</b>
+  </div>
+  <div class="col-sm-6 bg-light border rounded border-dark">
+    <b>信箱</b>
+  </div>
+  </div>
+  {% for student in students %}
+  <div class="row justify-content-center">
+    <div class="col-sm-2 bg-light">
+      <p>{{ student.name }}<p>
+    </div>
+    <div class="col-sm-6 bg-light ">
+      <p>{{ student.email }}<p>
+    </div>
+    </div>
+{% endfor %}
+<div class="row"><br></div>
+<div class="row justify-content-center">
+  <div class="col-sm-2  bg-light ">
+  <a href="/home/rms/A">回上一頁</a>
+  </div>
+</div>
+<div class="row"><br></div>
+
+{% endblock %}
+
+
+<!--https://medium.com/seaniap/python-web-flask-get-post%E5%82%B3%E9%80%81%E8%B3%87%E6%96%99-2826aeeb0e28-->

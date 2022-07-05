@@ -1,0 +1,138 @@
+{% extends "rms.html" %}
+
+{% block title %}BOSS{% endblock %}
+
+{% block title2 %}BOSS{% endblock %}
+
+
+
+
+
+{% block container %}
+
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-3 bg-light border rounded border-dark">
+    <b>圖片</b>
+  </div>
+  <div class="col-sm-6 bg-light border rounded border-dark">
+    <b>資訊</b>
+  </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-3 bg-light border rounded " >
+      <img  src="{{ url_for('static', filename='img/boss5.png') }}"  style="vertical-align:middle;" alt=""  width="150" >
+    </div>
+    <div class="col-sm-6 bg-light rounded border-bottom border-right border-top">
+      <p>拉圖斯<p>
+        <button  type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">位置</button>
+
+<!-- 跳出視窗內容 -->
+
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+<!-- Header -->
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+<!-- Body -->
+                <img  src="{{ url_for('static', filename='img/pig.png') }}"  style="vertical-align:middle;" alt=""  width="150">
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-3 bg-light border rounded " >
+      <img  src="{{ url_for('static', filename='img/pig.png') }}"  style="vertical-align:middle;" alt=""  width="150" >
+    </div>
+    <div class="col-sm-6 bg-light rounded border-bottom border-right border-top">
+      <p>野豬王<p>
+        <button  type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">位置</button>
+
+<!-- 跳出視窗內容 -->
+
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+<!-- Header -->
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+<!-- Body -->
+                <img  src="{{ url_for('static', filename='img/pig.png') }}"  style="vertical-align:middle;" alt=""   width="150">
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  {% for boss in bosses %}
+  <div class="row justify-content-center">
+    <div class="col-sm-3 bg-light border rounded " >
+     
+      <img  src="{{boss.url}}" style="vertical-align:middle;" alt="" width="150"  >
+    </div>
+    <div class="col-sm-6 bg-light rounded border-bottom border-right border-top">
+      <p>名稱:{{boss.name}}，等級:{{boss.lv}}血量:{{boss.hp}}經驗值:{{boss.exp}}<p>
+
+        <form method="post">
+          {{ delete_form.csrf_token }}
+          {{ delete_form.delete_name(value=boss.name) }}
+          {{ delete_form.delete(class="btn btn-danger") }}
+      </form>
+
+    </div>
+  </div>
+
+{% endfor %}
+
+  <div class="row justify-content-center">
+    <div class="col-sm-3 bg-light border rounded " >
+      <img  src="{{ url_for('static', filename='img/fly.png') }}"  style="vertical-align:middle;" alt=""  width="150" >
+    </div>
+    <div class="col-sm-6 bg-light rounded border-bottom border-right border-top">
+      <p>蝴蝶<p>
+        <button  type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">位置</button>
+
+<!-- 跳出視窗內容 -->
+
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+<!-- Header -->
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+<!-- Body -->
+                <img  src="{{ url_for('static', filename='img/pig.png') }}"  style="vertical-align:middle;" alt=""  width="150" >
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
+<div class="row"><br></div>
+<div class="row justify-content-center">
+  <div class="col-sm-2  bg-light ">
+  <a href="/home/rms/boss">回上一頁</a>
+  </div>
+</div>
+<div class="row"><br></div>
+
+{% endblock %}
+
+<script>
+$(function () {
+  $('[data-bs-toggle="popover"]').popover()
+})
+  </script>
+<!--https://medium.com/seaniap/python-web-flask-get-post%E5%82%B3%E9%80%81%E8%B3%87%E6%96%99-2826aeeb0e28-->

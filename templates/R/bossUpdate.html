@@ -1,0 +1,37 @@
+{% extends "rms.html" %}
+
+{% block container %}
+<div class="row justify-content-center">
+  <div class="col-sm-12 bg-light ">
+  <form action = "{{ request.path }}"  method="POST"> <!-- form 表單 -->
+      {{form.hidden_tag()}}
+      {{form.name.label(class='form-label')}} 
+      {{form.name(class='form-control')}} 
+      <br>
+      {{form.lv.label(class='form-label')}} 
+      {{form.lv(class='form-control')}} 
+      <br>
+      {{form.hp.label(class='form-label')}} 
+      {{form.hp(class='form-control')}} 
+      <br>
+      {{form.exp.label(class='form-label')}} 
+      {{form.exp(class='form-control')}} 
+      <br>
+      {{form.url.label(class='form-label')}} 
+      {{form.url(class='form-control')}} 
+      {{form.submit(class='btn btn-primary')}}
+    </form>
+  </div>
+</div>
+<div class="row  "><br></div>
+<div class="row justify-content-center">
+  
+  <div class="col-sm-2  bg-light  ">
+    <a href="/home/rms/boss">  回上一頁</a>
+  </div>
+</div>
+<div class="row "><br></div>
+
+{% endblock %}
+
+
